@@ -18,7 +18,7 @@ export const BgLeftReviews = styled.div`
     }
 `;
 
-export const ReviewsTitle = styled.h1`
+export const ReviewsTitle = styled.h2`
     color: ${({ theme }) => theme.clrHeading};
     font-size: ${({ mobile, theme }) =>
         mobile

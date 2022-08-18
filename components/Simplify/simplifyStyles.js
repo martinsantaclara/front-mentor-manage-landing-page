@@ -10,7 +10,7 @@ export const SimplifyContainer = styled.section`
     overflow: hidden;
 `;
 
-export const SimplifyTitle = styled.h1`
+export const SimplifyTitle = styled.h2`
     font-weight: ${({ theme }) => theme.fwHeading_lg};
     font-size: ${({ theme }) => theme.fsHeading_lg}rem;
     line-height: ${({ mobile }) => (mobile ? '1.25' : '1.1')};

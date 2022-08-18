@@ -17,7 +17,7 @@ export const FeatureHead = styled.div`
     max-width: 29.6875rem;
 `;
 
-export const FeatureTitle = styled.h1`
+export const FeatureTitle = styled.h2`
     color: ${({ theme }) => theme.clrHeading};
     position: relative;
     font-size: ${({ mobile, theme }) =>
