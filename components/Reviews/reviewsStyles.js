@@ -74,6 +74,8 @@ export const ItemReview = styled.div`
 `;
 
 export const ReviewImage = styled.div`
+    width: 72px;
+    height: 72px;
     position: absolute;
     top: -2.25rem;
     left: calc(50% - 1.875rem);
