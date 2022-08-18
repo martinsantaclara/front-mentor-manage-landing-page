@@ -41,7 +41,7 @@ function Footer({ mobile }) {
         <FooterContainer mobile={mobile}>
             <Container
                 mobile={mobile}
-                direction={'column'}
+                flxdirection={'column'}
                 widthComponent={'87%'}
                 align={''}
             >

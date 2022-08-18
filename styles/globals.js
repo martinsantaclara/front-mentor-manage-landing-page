@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
     position: relative;
     display: flex;
-    flex-direction: ${({ direction }) => direction};
+    flex-direction: ${({ flxdirection }) => flxdirection};
     justify-content: space-between;
     align-items: ${({ align }) => align};
     width: ${({ widthComponent }) => widthComponent};

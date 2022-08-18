@@ -2,9 +2,9 @@ import React from 'react';
 import Link from 'next/link';
 import { Links, NavLink } from './headerStyles';
 
-function NavLinks({ mobile, direction }) {
+function NavLinks({ mobile, flxdirection }) {
     return (
-        <Links direction={direction}>
+        <Links flxdirection={flxdirection}>
             <Link href="/pricing">
                 <NavLink mobile={mobile}>Pricing</NavLink>
             </Link>

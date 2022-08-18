@@ -38,7 +38,7 @@ export const NavLink = styled.a`
 
 export const Links = styled.nav`
     display: flex;
-    flex-direction: ${({ direction }) => direction};
+    flex-direction: ${({ flxdirection }) => flxdirection};
     justify-content: center;
     align-items: center;
     flex-grow: 1;

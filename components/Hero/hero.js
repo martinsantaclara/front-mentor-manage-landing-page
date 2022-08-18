@@ -19,7 +19,7 @@ function Hero({ mobile, widthScreen }) {
         <HeroContainer mobile={mobile}>
             <Container
                 mobile={mobile}
-                direction={mobile ? 'column' : 'row-reverse'}
+                flxdirection={mobile ? 'column' : 'row-reverse'}
                 widthComponent={'87%'}
                 align={mobile ? 'center' : 'start'}
             >

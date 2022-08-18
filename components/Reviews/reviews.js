@@ -84,7 +84,7 @@ const Reviews = ({ mobile, widthScreen }) => {
         <ReviewsContainer id="reviews">
             <Container
                 mobile={mobile}
-                direction={'column'}
+                flxdirection={'column'}
                 widthComponent={'100%'}
                 align={''}
                 reviews

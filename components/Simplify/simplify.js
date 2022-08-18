@@ -13,7 +13,7 @@ function Simplify({ mobile, widthScreen }) {
         <SimplifyContainer mobile={mobile}>
             <Container
                 mobile={mobile}
-                direction={mobile ? 'column' : 'row'}
+                flxdirection={mobile ? 'column' : 'row'}
                 widthComponent={'87%'}
                 align={'center'}
             >

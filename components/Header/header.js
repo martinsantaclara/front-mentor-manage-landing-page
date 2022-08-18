@@ -17,18 +17,18 @@ function Header({ mobile, mobileMenu, setMobileMenu }) {
         <HeaderContainer mobile={mobile}>
             <Container
                 mobile={mobile}
-                direction={'row'}
+                flxdirection={'row'}
                 widthComponent={'87%'}
                 align={'center'}
             >
-                {/* <Link href="/">
+                <Link href="/">
                     <WrapperLogo>
                         <Logo mobile={mobile} />
                     </WrapperLogo>
-                </Link> */}
+                </Link>
                 {!mobile && (
                     <DesktopMenu>
-                        <NavLinks mobile={mobile} direction={'row'} />
+                        <NavLinks mobile={mobile} flxdirection={'row'} />
                         <Button
                             align={mobile ? 'center' : 'flex-start'}
                             margin={mobile ? '1.25rem 0' : '0'}
@@ -54,7 +54,7 @@ function Header({ mobile, mobileMenu, setMobileMenu }) {
             {mobile && mobileMenu && (
                 <BgMobileMenu>
                     <ContainerMobileMenu>
-                        <NavLinks mobile={mobile} direction={'column'} />
+                        <NavLinks mobile={mobile} flxdirection={'column'} />
                     </ContainerMobileMenu>
                 </BgMobileMenu>
             )}

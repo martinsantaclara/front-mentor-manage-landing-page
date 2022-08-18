@@ -40,7 +40,7 @@ function Features({ mobile, widthScreen, dark }) {
         <FeaturesContainer mobile={mobile}>
             <Container
                 mobile={mobile}
-                direction={mobile ? 'column' : 'row'}
+                flxdirection={mobile ? 'column' : 'row'}
                 widthComponent={mobile ? '100%' : '87%'}
                 align={''}
             >
