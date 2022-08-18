@@ -24,7 +24,7 @@ function Hero({ mobile, widthScreen }) {
                 align={mobile ? 'center' : 'start'}
             >
                 <ContainerHeroImage mobile={mobile}>
-                    <HeroIllustration></HeroIllustration>
+                    <HeroIllustration />
                     {/* <Image
                         width={540}
                         height={485}
