@@ -45,13 +45,13 @@ function Hero({ mobile, widthScreen }) {
                     >
                         Get Started
                     </Button>
-                    <BgHeroContent
+                    {/* <BgHeroContent
                         mobile={mobile}
                         right={rightBgHeroContent}
                         aria-hidden="true"
                     >
                         <RightHeroSvg />
-                    </BgHeroContent>
+                    </BgHeroContent> */}
                 </HeroContent>
             </Container>
         </HeroContainer>
