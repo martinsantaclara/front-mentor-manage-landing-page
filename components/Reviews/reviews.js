@@ -111,6 +111,7 @@ const Reviews = ({ mobile, widthScreen }) => {
                                 >
                                     <ReviewImage>
                                         <Image
+                                            unoptimized={true}
                                             src={`/images/avatar-${item.image}.png`}
                                             width="72px"
                                             height="72px"
