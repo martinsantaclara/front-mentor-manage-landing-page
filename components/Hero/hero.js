@@ -25,10 +25,11 @@ function Hero({ mobile, widthScreen }) {
             >
                 <ContainerHeroImage mobile={mobile}>
                     <Image
-                        width={540}
-                        height={485}
+                        // width={540}
+                        // height={485}
                         alt="hero-illustration"
                         src={HeroIllustration}
+                        layout="fill"
                     ></Image>
                 </ContainerHeroImage>
                 <HeroContent mobile={mobile}>
