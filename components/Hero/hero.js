@@ -29,7 +29,7 @@ function Hero({ mobile, widthScreen }) {
                         // height={485}
                         alt="hero-illustration"
                         src={HeroIllustration}
-                        layout="fill"
+                        layout="responsive"
                     ></Image>
                 </ContainerHeroImage>
                 <HeroContent mobile={mobile}>
