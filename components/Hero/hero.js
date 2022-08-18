@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import Image from 'next/image';
 import {
     BgHeroContent,
@@ -45,7 +46,10 @@ function Hero({ mobile, widthScreen }) {
                         align={mobile ? 'center' : 'flex-start'}
                         margin={mobile ? '1.25rem 0' : '0'}
                     >
-                        Get Started
+                        <Link href="/started">
+                            <a href="">Get Started</a>
+                        </Link>
+                        {/* Get Started */}
                     </Button>
                     <BgHeroContent
                         mobile={mobile}

@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Container, Button } from '../../styles/globals';
 import {
     BgSimplify,
@@ -29,7 +30,10 @@ function Simplify({ mobile, widthScreen }) {
                     }
                     inverted
                 >
-                    Get Started
+                    <Link href="/started">
+                        <a href="">Get Started</a>
+                    </Link>
+                    {/* Get Started */}
                 </Button>
             </Container>
             <BgSimplify widthScreen={widthScreen} aria-hidden="true">

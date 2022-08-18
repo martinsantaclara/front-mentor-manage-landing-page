@@ -1,5 +1,31 @@
 import styled from 'styled-components';
+import { css } from 'styled-components';
 
+const sharedStyleButtons = css`
+    position: relative;
+    font-size: ${({ theme }) => theme.fsText_xs}rem;
+    font-weight: ${({ theme }) => theme.fwBold};
+    line-height: 1.4;
+    color: ${({ theme, inverted }) =>
+        inverted ? theme.btnInvertedClr : theme.btnClr};
+    background-color: ${({ theme, inverted }) =>
+        inverted ? theme.btnInvertedBg : theme.btnBg};
+    padding: 0.8125rem 1.875rem;
+    align-self: ${({ align }) => align};
+    margin: ${({ margin }) => margin};
+    box-shadow: 0rem 0.9375rem 0.9375rem -0.625rem ${({ theme, inverted }) => (inverted ? theme.btnInvertedShadow : theme.btnShadow)};
+    border-radius: 1.375rem;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+
+    &:hover {
+        background-color: ${({ theme, inverted }) =>
+            inverted ? theme.btnInvertedHoverBg : theme.btnHoverBg};
+        color: ${({ theme, inverted }) =>
+            inverted ? theme.btnInvertedHoverClr : theme.btnHoverClr};
+    }
+`;
 export const Container = styled.div`
     position: relative;
     display: flex;
@@ -25,34 +51,13 @@ export const ContainerMobileMenu = styled.div`
     max-width: 25rem;
 `;
 
-export const Button = styled.button`
-    position: relative;
-    font-size: ${({ theme }) => theme.fsText_xs}rem;
-    font-weight: ${({ theme }) => theme.fwBold};
-    line-height: 1.4;
-    color: ${({ theme, inverted }) =>
-        inverted ? theme.btnInvertedClr : theme.btnClr};
-    background-color: ${({ theme, inverted }) =>
-        inverted ? theme.btnInvertedBg : theme.btnBg};
-    padding: 0.8125rem 1.875rem;
-    align-self: ${({ align }) => align};
-    margin: ${({ margin }) => margin};
-    box-shadow: 0rem 0.9375rem 0.9375rem -0.625rem ${({ theme, inverted }) => (inverted ? theme.btnInvertedShadow : theme.btnShadow)};
-    border-radius: 1.375rem;
-    border: none;
-    cursor: pointer;
-    z-index: 1;
-
-    &:hover {
-        background-color: ${({ theme, inverted }) =>
-            inverted ? theme.btnInvertedHoverBg : theme.btnHoverBg};
-        color: ${({ theme, inverted }) =>
-            inverted ? theme.btnInvertedHoverClr : theme.btnHoverClr};
-    }
+export const Button = styled.div`
+    ${sharedStyleButtons}
 `;
 
-export const ButtonFooter = styled(Button)`
-    top: ${({ mobile }) => (mobile ? '2px' : '4px')};
+export const ButtonFooter = styled.button`
+    ${sharedStyleButtons}
+    top: ${({ mobile }) => (mobile ? '2px' : '2px')};
     padding: 0.8125rem ${({ mobile }) => (mobile ? '1.875rem' : '1.45rem')};
     box-shadow: none;
 `;

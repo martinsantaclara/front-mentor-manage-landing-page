@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Button, Container } from '../../styles/globals';
 import {
     BgLeftReviews,
@@ -145,7 +146,10 @@ const Reviews = ({ mobile, widthScreen }) => {
                     align={'center'}
                     margin={mobile ? '1.25rem 0' : '3rem 0 0'}
                 >
-                    Get Started
+                    <Link href="/started">
+                        <a href="">Get Started</a>
+                    </Link>
+                    {/* Get Started */}
                 </Button>
             </Container>
         </ReviewsContainer>
