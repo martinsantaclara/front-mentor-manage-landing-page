@@ -25,8 +25,8 @@ function Hero({ mobile, widthScreen }) {
                 <ContainerHeroImage mobile={mobile}>
                     <Image
                         src="/images/illustration-intro.svg"
-                        width="540px"
-                        height="485px"
+                        width={540}
+                        height={485}
                         alt="hero-illustration"
                     ></Image>
                 </ContainerHeroImage>
