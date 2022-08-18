@@ -46,12 +46,13 @@ function Simplify({ mobile, widthScreen }) {
             </BgSimplify>
             {!mobile && (
                 <BgSimplifyUp aria-hidden="true">
-                    <Image
+                    <BgReview />
+                    {/* <Image
                         src="/images/bg-tablet-pattern.svg"
                         width="814px"
                         height="814px"
                         alt=""
-                    ></Image>
+                    ></Image> */}
                 </BgSimplifyUp>
             )}
         </SimplifyContainer>

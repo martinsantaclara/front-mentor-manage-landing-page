@@ -27,6 +27,7 @@ import {
     Youtube,
 } from './footerStyles';
 import { NavLink } from '../Header/headerStyles';
+import { FooterLogoSvg } from './footerLogoSvg';
 
 function Footer({ mobile }) {
     const {
@@ -133,12 +134,13 @@ function Footer({ mobile }) {
                             <FaInstagram className="social-icon"></FaInstagram>
                         </FooterIcons>
                         <FooterLogo mobile={mobile}>
-                            <Image
+                            <FooterLogoSvg />
+                            {/* <Image
                                 src="/images/footer-logo.svg"
                                 alt="Footer Manage Logo"
                                 width="158px"
                                 height="26px"
-                            ></Image>
+                            ></Image> */}
                         </FooterLogo>
                     </LogoSocialIcons>
                 </FooterBody>
