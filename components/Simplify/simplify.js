@@ -7,6 +7,8 @@ import {
     SimplifyContainer,
     SimplifyTitle,
 } from './simplifyStyles';
+import { BgReview } from '../Reviews/bgReview';
+import { BgSimplifyMobile } from './bgSimplifyMobile';
 
 function Simplify({ mobile, widthScreen }) {
     return (
@@ -31,6 +33,8 @@ function Simplify({ mobile, widthScreen }) {
                 </Button>
             </Container>
             <BgSimplify widthScreen={widthScreen} aria-hidden="true">
+                {mobile ? <BgSimplifyMobile /> : <BgReview />}
+                {/* 
                 <Image
                     src={`/images/bg-${
                         mobile ? 'simplify-section-mobile' : 'tablet-pattern'
@@ -38,7 +42,7 @@ function Simplify({ mobile, widthScreen }) {
                     width={`${mobile ? '94px' : '814px'}`}
                     height={`${mobile ? '302px' : '814px'}`}
                     alt=""
-                ></Image>
+                ></Image> */}
             </BgSimplify>
             {!mobile && (
                 <BgSimplifyUp aria-hidden="true">
