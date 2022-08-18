@@ -55,6 +55,17 @@ const Reviews = ({ mobile, widthScreen }) => {
         },
     ];
 
+    const avatar_urls = [
+        '/images/avatar-ali.png',
+        '/images/avatar-anisha.png',
+        '/images/avatar-richard.png',
+        '/images/avatar-shanai.png',
+    ];
+
+    const avatar = (index) => {
+        return <Image src={avatar_urls[index]} height={90} width={90} alt="" />;
+    };
+
     useEffect(() => {
         if (!mobile) {
             const interval = setInterval(() => {
@@ -113,12 +124,14 @@ const Reviews = ({ mobile, widthScreen }) => {
                                     show={itemIndex === index || !mobile}
                                 >
                                     <ReviewImage>
-                                        <Image
+                                        {avatar(index)}
+
+                                        {/* <Image
                                             src={`/images/avatar-${item.image}.png`}
                                             width="72px"
                                             height="72px"
                                             alt={`avatar-${item.image}`}
-                                        ></Image>
+                                        ></Image> */}
                                     </ReviewImage>
                                     <ReviewName>{item.name}</ReviewName>
                                     <ReviewDescription mobile={mobile}>
