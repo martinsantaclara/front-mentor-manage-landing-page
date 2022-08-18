@@ -21,11 +21,11 @@ function Header({ mobile, mobileMenu, setMobileMenu }) {
                 widthComponent={'87%'}
                 align={'center'}
             >
-                <Link href="/">
+                {/* <Link href="/">
                     <WrapperLogo>
                         <Logo mobile={mobile} />
                     </WrapperLogo>
-                </Link>
+                </Link> */}
                 {!mobile && (
                     <DesktopMenu>
                         <NavLinks mobile={mobile} direction={'row'} />
