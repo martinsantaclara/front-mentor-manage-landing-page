@@ -142,9 +142,7 @@ function Footer({ mobile }) {
                         </FooterLogo>
                     </LogoSocialIcons>
                 </FooterBody>
-                <Copyright role="contentinfo">
-                    Copyright 2020. All Rights Reserved
-                </Copyright>
+                <Copyright>Copyright 2020. All Rights Reserved</Copyright>
             </Container>
         </FooterContainer>
     );
