@@ -15,6 +15,7 @@ import {
     ReviewsContainer,
     ReviewsTitle,
 } from './reviewsStyles';
+import { BgReview } from './bgReview';
 
 const positionCalc = (widthScreen) => {
     const pos = Math.floor((widthScreen / 2 - 300) / 570);
@@ -90,12 +91,13 @@ const Reviews = ({ mobile, widthScreen }) => {
                 reviews
             >
                 <BgLeftReviews widthScreen={widthScreen} aria-hidden="true">
-                    <Image
+                    <BgReview />
+                    {/* <Image
                         src="/images/bg-tablet-pattern.svg"
                         alt=""
                         width="814px"
                         height="814px"
-                    ></Image>
+                    ></Image> */}
                 </BgLeftReviews>
                 <ReviewsTitle mobile={mobile}>What they’ve said</ReviewsTitle>
                 <ItemsReviewStyle
