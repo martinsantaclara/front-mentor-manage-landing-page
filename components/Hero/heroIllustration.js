@@ -3,8 +3,8 @@ export const HeroIllustration = () => {
         <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
-            width="580"
-            height="525"
+            width="540"
+            height="485"
         >
             <defs>
                 <filter
