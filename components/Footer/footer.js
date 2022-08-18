@@ -46,7 +46,7 @@ function Footer({ mobile }) {
                 align={''}
             >
                 <FooterBody>
-                    <FooterForm role="form" onSubmit={handleSubmit(onSubmit)}>
+                    <FooterForm onSubmit={handleSubmit(onSubmit)}>
                         <InputFooter
                             mobile={mobile}
                             name="email"

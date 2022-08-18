@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const FooterContainer = styled.section`
+export const FooterContainer = styled.footer`
     padding: ${({ mobile }) =>
         mobile
             ? '3.4375rem 0 1.625rem'
