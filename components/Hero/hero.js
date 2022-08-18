@@ -10,7 +10,7 @@ import {
 } from './heroStyles';
 import { Container, Button } from '../../styles/globals';
 import { RightHeroSvg } from './rightHeroSvg';
-// import { HeroIllustration } from './heroIllustration';
+import { HeroIllustration } from './heroIllustration';
 
 function Hero({ mobile, widthScreen }) {
     const rightBgHeroContent =
@@ -24,7 +24,7 @@ function Hero({ mobile, widthScreen }) {
                 align={mobile ? 'center' : 'start'}
             >
                 <ContainerHeroImage mobile={mobile}>
-                    {/* <HeroIllustration></HeroIllustration> */}
+                    <HeroIllustration></HeroIllustration>
                     <Image
                         width={540}
                         height={485}
