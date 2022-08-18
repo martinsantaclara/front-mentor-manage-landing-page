@@ -14,7 +14,7 @@ function Simplify({ mobile, widthScreen }) {
             <Container
                 mobile={mobile}
                 direction={mobile ? 'column' : 'row'}
-                width={'87%'}
+                widthComponent={'87%'}
                 align={'center'}
             >
                 <SimplifyTitle mobile={mobile}>

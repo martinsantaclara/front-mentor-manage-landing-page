@@ -41,7 +41,7 @@ function Features({ mobile, widthScreen, dark }) {
             <Container
                 mobile={mobile}
                 direction={mobile ? 'column' : 'row'}
-                width={mobile ? '100%' : '87%'}
+                widthComponent={mobile ? '100%' : '87%'}
                 align={''}
             >
                 <FeatureHeadWrapper mobile={mobile}>

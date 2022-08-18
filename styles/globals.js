@@ -6,7 +6,7 @@ export const Container = styled.div`
     flex-direction: ${({ direction }) => direction};
     justify-content: space-between;
     align-items: ${({ align }) => align};
-    width: ${({ width }) => width};
+    width: ${({ widthComponent }) => widthComponent};
     max-width: ${({ mobile, reviews }) =>
         mobile ? '31.25rem' : reviews ? '' : '69.375rem'};
     margin: 0 auto;

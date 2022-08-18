@@ -7,6 +7,7 @@ import Features from '../components/Features/features';
 import Reviews from '../components/Reviews/reviews';
 import Simplify from '../components/Simplify/simplify';
 import Footer from '../components/Footer/footer';
+import Head from 'next/head';
 
 const useWidth = () => {
     const [width, setWidth] = useState(0);
@@ -39,10 +40,10 @@ export default function Home({ dark }) {
         <>
             {width !== 0 && (
                 <>
-                    <BgUpperCorner
-                        mobile={mobile}
-                        width={width}
-                    ></BgUpperCorner>
+                    <Head>
+                        <title>Manage</title>
+                    </Head>
+                    <BgUpperCorner mobile={mobile}></BgUpperCorner>
                     <Header
                         mobile={mobile}
                         mobileMenu={mobileMenu}

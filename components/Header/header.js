@@ -18,7 +18,7 @@ function Header({ mobile, mobileMenu, setMobileMenu }) {
             <Container
                 mobile={mobile}
                 direction={'row'}
-                width={'87%'}
+                widthComponent={'87%'}
                 align={'center'}
             >
                 <Link href="/">

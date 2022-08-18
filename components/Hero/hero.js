@@ -19,7 +19,7 @@ function Hero({ mobile, widthScreen }) {
             <Container
                 mobile={mobile}
                 direction={mobile ? 'column' : 'row-reverse'}
-                width={'87%'}
+                widthComponent={'87%'}
                 align={mobile ? 'center' : 'start'}
             >
                 <ContainerHeroImage mobile={mobile}>
