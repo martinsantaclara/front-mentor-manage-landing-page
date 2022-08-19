@@ -114,12 +114,21 @@ const Reviews = ({ mobile, widthScreen }) => {
                                     show={itemIndex === index || !mobile}
                                 >
                                     <ReviewImage>
-                                        <Image
+                                        {/* <Image
                                             src={`/images/avatar-${item.image}.png`}
                                             width="72px"
                                             height="72px"
                                             alt={`avatar-${item.image}`}
-                                        ></Image>
+                                        ></Image> */}
+
+                                        <img
+                                            src={`/images/avatar-${item.image}.png`}
+                                            alt={`avatar-${item.image}`}
+                                            style={{
+                                                width: '72px',
+                                                height: '72px',
+                                            }}
+                                        />
                                     </ReviewImage>
                                     <ReviewName>{item.name}</ReviewName>
                                     <ReviewDescription mobile={mobile}>
