@@ -10,7 +10,7 @@ import {
 } from './heroStyles';
 import { Container, Button } from '../../styles/globals';
 import { RightHeroSvg } from './rightHeroSvg';
-import { HeroImage } from './HeroImage';
+import { HeroImage } from './heroImage';
 
 function Hero({ mobile, widthScreen }) {
     const rightBgHeroContent =
