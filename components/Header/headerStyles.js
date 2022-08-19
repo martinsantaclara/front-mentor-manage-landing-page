@@ -44,7 +44,7 @@ export const Links = styled.nav`
     flex-grow: 1;
 `;
 
-export const WrapperLogo = styled.a`
+export const LogoWrapper = styled.a`
     position: relative;
     top: 0.3125rem;
     cursor: pointer;

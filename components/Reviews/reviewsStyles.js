@@ -19,7 +19,7 @@ export const BgLeftReviews = styled.div`
 `;
 
 export const ReviewsTitle = styled.h2`
-    color: ${({ theme }) => theme.clrHeading};
+    color: ${({ theme }) => theme.clrHeading1};
     font-size: ${({ mobile, theme }) =>
         mobile
             ? `${theme.fsHeading_md}rem`
@@ -43,7 +43,7 @@ export const ReviewsTitle = styled.h2`
 // ancho review 340
 // left: ${(props) => props.widthScreen / 2 - 540 - 370 * props.position}px;
 
-export const ItemsReviewStyle = styled.div`
+export const ReviewsItemsWrapper = styled.div`
     margin: 0 1rem;
 
     @media ${({ theme }) => theme.breakpoints.md} {
@@ -57,11 +57,11 @@ export const ItemsReviewStyle = styled.div`
     }
 `;
 
-export const ItemReviewDesktop = styled.div`
+export const ReviewItemWrapper = styled.div`
     display: ${({ mobile }) => (!mobile ? 'flex' : '')};
 `;
 
-export const ItemReview = styled.div`
+export const ReviewItem = styled.div`
     position: relative;
     background-color: ${({ theme }) => theme.surface};
     padding-top: 3.75rem;
@@ -73,22 +73,27 @@ export const ItemReview = styled.div`
     }
 `;
 
-export const ReviewImage = styled.div`
+export const ReviewItemImage = styled.div`
     position: absolute;
     top: -2.25rem;
     left: calc(50% - 1.875rem);
 `;
 
-export const ReviewName = styled.p`
-    color: ${({ theme }) => theme.onBackground};
-    font-size: ${({ theme }) => theme.fsText_lg}rem;
-    font-weight: ${({ theme }) => theme.fwBold};
+export const Avatar = styled.img`
+    width: 72px;
+    height: 72px;
+`;
+
+export const ReviewItemName = styled.h3`
+    color: ${({ theme }) => theme.clrHeading1};
+    font-size: ${({ theme }) => theme.fsHeading_xs}rem;
+    font-weight: ${({ theme }) => theme.fwHeadin_xs};
     text-align: center;
     line-height: 1.5;
     letter-spacing: -0.29px;
 `;
 
-export const ReviewDescription = styled.div`
+export const ReviewItemDescription = styled.div`
     color: ${({ theme }) => theme.onBackgroundOpacity};
     padding: 1.1875rem 0 2.625rem 0;
     font-size: ${({ mobile, theme }) =>

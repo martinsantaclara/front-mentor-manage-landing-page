@@ -1,4 +1,8 @@
+import { useTheme } from 'styled-components';
+
 export const BgReview = () => {
+    const theme = useTheme();
+
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -10,7 +14,7 @@ export const BgReview = () => {
                 height="970"
                 x="774"
                 y="-62"
-                fill="#FFF0EC"
+                fill={theme.primaryLight}
                 fillRule="evenodd"
                 rx="218"
                 transform="rotate(45 718.814 -291.157)"

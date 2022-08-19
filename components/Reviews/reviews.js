@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import { Button, Container } from '../../styles/globals';
 import {
+    Avatar,
     BgLeftReviews,
-    ItemReview,
-    ItemReviewDesktop,
-    ItemsReviewStyle,
+    ReviewItem,
+    ReviewItemWrapper,
+    ReviewsItemsWrapper,
     OnlyMargin,
     ReviewBtn,
     ReviewBtns,
-    ReviewDescription,
-    ReviewImage,
-    ReviewName,
+    ReviewItemDescription,
+    ReviewItemImage,
+    ReviewItemName,
     ReviewsContainer,
     ReviewsTitle,
 } from './reviewsStyles';
@@ -28,7 +28,7 @@ const Reviews = ({ mobile, widthScreen }) => {
     const [count, setCount] = useState(1);
     const [position, setPosition] = useState(positionCalc(widthScreen));
 
-    const ItemsReview = [
+    const ReviewsItems = [
         {
             name: 'Anisha Li',
             image: 'anisha',
@@ -62,11 +62,11 @@ const Reviews = ({ mobile, widthScreen }) => {
 
                 // ancho review de 540
                 const left = widthScreen / 2 - 840 - 570 * newPosition;
-                const offsetReview = 570 * ItemsReview.length - 30 + left;
+                const offsetReview = 570 * ReviewsItems.length - 30 + left;
 
                 // ancho review de 340
                 // const left = widthScreen / 2 - 540 - 370 * newPosition;
-                // const offsetReview = 370 * ItemsReview.length - 30 + left;
+                // const offsetReview = 370 * ReviewsItems.length - 30 + left;
 
                 if (count === -1 && left > widthScreen) {
                     newPosition = position + 1;
@@ -89,60 +89,42 @@ const Reviews = ({ mobile, widthScreen }) => {
                 flxdirection={'column'}
                 widthComponent={'100%'}
                 align={''}
-                reviews
+                reviewSection
             >
                 <BgLeftReviews widthScreen={widthScreen} aria-hidden="true">
                     <BgReview />
-
-                    {/* <Image
-                        src="/images/bg-tablet-pattern.svg"
-                        alt=""
-                        width="814px"
-                        height="814px"
-                    ></Image> */}
                 </BgLeftReviews>
                 <ReviewsTitle mobile={mobile}>What they’ve said</ReviewsTitle>
-                <ItemsReviewStyle
+                <ReviewsItemsWrapper
                     mobile={mobile}
                     widthScreen={widthScreen}
                     position={position}
                 >
-                    {ItemsReview.map((item, index) => {
+                    {ReviewsItems.map((item, index) => {
                         return (
-                            <ItemReviewDesktop mobile={mobile} key={item.name}>
-                                <ItemReview
+                            <ReviewItemWrapper mobile={mobile} key={item.name}>
+                                <ReviewItem
                                     show={itemIndex === index || !mobile}
                                 >
-                                    <ReviewImage>
-                                        {/* <Image
-                                            src={`/images/avatar-${item.image}.png`}
-                                            width="72px"
-                                            height="72px"
-                                            alt={`avatar-${item.image}`}
-                                        ></Image> */}
-
-                                        <img
+                                    <ReviewItemImage>
+                                        <Avatar
                                             src={`/images/avatar-${item.image}.png`}
                                             alt={`avatar-${item.image}`}
-                                            style={{
-                                                width: '72px',
-                                                height: '72px',
-                                            }}
                                         />
-                                    </ReviewImage>
-                                    <ReviewName>{item.name}</ReviewName>
-                                    <ReviewDescription mobile={mobile}>
+                                    </ReviewItemImage>
+                                    <ReviewItemName>{item.name}</ReviewItemName>
+                                    <ReviewItemDescription mobile={mobile}>
                                         {item.description}
-                                    </ReviewDescription>
-                                </ItemReview>
+                                    </ReviewItemDescription>
+                                </ReviewItem>
                                 {!mobile && <OnlyMargin></OnlyMargin>}
-                            </ItemReviewDesktop>
+                            </ReviewItemWrapper>
                         );
                     })}
-                </ItemsReviewStyle>
+                </ReviewsItemsWrapper>
                 {mobile && (
                     <ReviewBtns>
-                        {ItemsReview.map((item, index) => (
+                        {ReviewsItems.map((item, index) => (
                             <ReviewBtn
                                 active={itemIndex === index}
                                 key={item.name}
@@ -159,7 +141,6 @@ const Reviews = ({ mobile, widthScreen }) => {
                     <Link href="/started">
                         <a href="">Get Started</a>
                     </Link>
-                    {/* Get Started */}
                 </Button>
             </Container>
         </ReviewsContainer>

@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import { Container, Button } from '../../styles/globals';
 import {
@@ -33,30 +32,14 @@ function Simplify({ mobile, widthScreen }) {
                     <Link href="/started">
                         <a href="">Get Started</a>
                     </Link>
-                    {/* Get Started */}
                 </Button>
             </Container>
             <BgSimplify widthScreen={widthScreen} aria-hidden="true">
                 {mobile ? <BgSimplifyMobile /> : <BgReview />}
-                {/* 
-                <Image
-                    src={`/images/bg-${
-                        mobile ? 'simplify-section-mobile' : 'tablet-pattern'
-                    }.svg`}
-                    width={`${mobile ? '94px' : '814px'}`}
-                    height={`${mobile ? '302px' : '814px'}`}
-                    alt=""
-                ></Image> */}
             </BgSimplify>
             {!mobile && (
                 <BgSimplifyUp aria-hidden="true">
                     <BgReview />
-                    {/* <Image
-                        src="/images/bg-tablet-pattern.svg"
-                        width="814px"
-                        height="814px"
-                        alt=""
-                    ></Image> */}
                 </BgSimplifyUp>
             )}
         </SimplifyContainer>

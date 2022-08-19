@@ -7,7 +7,7 @@ export const HeroContainer = styled.div`
             : 'clamp(1rem, 9.52vw - 3.57rem, 5rem) 0 3.35rem 0'};
 `;
 
-export const ContainerHeroImage = styled.div`
+export const HeroImageWrapper = styled.div`
     width: ${({ mobile }) => (mobile ? '97.5%' : '48.65%')};
     max-width: ${({ mobile }) => (mobile ? '28.125rem' : '33.75rem')};
     align-self: ${({ mobile }) => (mobile ? '' : 'flex-start')};
@@ -28,7 +28,7 @@ export const HeroContent = styled.div`
 
 export const HeroTitle = styled.h1`
     font-family: ${({ theme }) => theme.ffHeading};
-    color: ${({ theme }) => theme.clrHeading};
+    color: ${({ theme }) => theme.clrHeading1};
     font-size: ${({ mobile, theme }) =>
         mobile
             ? `${theme.fsHeading_lg}rem`

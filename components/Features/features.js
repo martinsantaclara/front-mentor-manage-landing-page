@@ -6,16 +6,16 @@ import {
     FeatureHeadWrapper,
     FeaturesContainer,
     FeatureTitle,
-    ItemFeature,
-    ItemFeatureDescription,
-    ItemFeatureHead,
-    ItemFeatureNumber,
-    ItemFeatureTitle,
-    ItemsFeatures,
+    FeatureItem,
+    FeatureItemDescription,
+    FeatureItemHead,
+    FeatureItemNumber,
+    FeatureItemTitle,
+    FeaturesItemsWrapper,
 } from './featuresStyles';
 
 function Features({ mobile, widthScreen, dark }) {
-    const itemsFeature = [
+    const FeaturesItems = [
         {
             number: '01',
             title: 'Track company-wide progress',
@@ -57,31 +57,31 @@ function Features({ mobile, widthScreen, dark }) {
                         </FeatureDescription>
                     </FeatureHead>
                 </FeatureHeadWrapper>
-                <ItemsFeatures widthScreen={widthScreen} mobile={mobile}>
-                    {itemsFeature.map((feature, index) => {
+                <FeaturesItemsWrapper widthScreen={widthScreen} mobile={mobile}>
+                    {FeaturesItems.map((feature, index) => {
                         return (
-                            <ItemFeature mobile={mobile} key={feature.number}>
-                                <ItemFeatureHead
+                            <FeatureItem mobile={mobile} key={feature.number}>
+                                <FeatureItemHead
                                     widthScreen={widthScreen}
                                     mobile={mobile}
                                 >
-                                    <ItemFeatureNumber>
+                                    <FeatureItemNumber>
                                         {feature.number}
-                                    </ItemFeatureNumber>
-                                    <ItemFeatureTitle
+                                    </FeatureItemNumber>
+                                    <FeatureItemTitle
                                         mobile={mobile}
                                         dark={dark}
                                     >
                                         {feature.title}
-                                    </ItemFeatureTitle>
-                                </ItemFeatureHead>
-                                <ItemFeatureDescription mobile={mobile}>
+                                    </FeatureItemTitle>
+                                </FeatureItemHead>
+                                <FeatureItemDescription mobile={mobile}>
                                     {feature.description}
-                                </ItemFeatureDescription>
-                            </ItemFeature>
+                                </FeatureItemDescription>
+                            </FeatureItem>
                         );
                     })}
-                </ItemsFeatures>
+                </FeaturesItemsWrapper>
             </Container>
         </FeaturesContainer>
     );

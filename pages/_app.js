@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import '../styles/globals.css';
 import { ThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme, GlobalStyles } from '../themes/themes';
 

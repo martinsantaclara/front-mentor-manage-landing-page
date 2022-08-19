@@ -33,12 +33,12 @@ export const Container = styled.div`
     justify-content: space-between;
     align-items: ${({ align }) => align};
     width: ${({ widthComponent }) => widthComponent};
-    max-width: ${({ mobile, reviews }) =>
-        mobile ? '31.25rem' : reviews ? '' : '69.375rem'};
+    max-width: ${({ mobile, reviewSection }) =>
+        mobile ? '31.25rem' : reviewSection ? '' : '69.375rem'};
     margin: 0 auto;
 `;
 
-export const ContainerMobileMenu = styled.div`
+export const MobileMenuContainer = styled.div`
     margin: 0 auto;
     width: 87%;
     display: flex;

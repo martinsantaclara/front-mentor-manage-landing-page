@@ -1,29 +1,26 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-
 import Link from 'next/link';
-import Image from 'next/image';
-import {
-    FaFacebookSquare,
-    FaYoutube,
-    FaTwitter,
-    FaPinterest,
-    FaInstagram,
-} from 'react-icons/fa';
+
 import { ButtonFooter, Container } from '../../styles/globals';
 import {
     Copyright,
+    Facebook,
     FooterBody,
     FooterContainer,
     FooterForm,
     FooterIcons,
     FooterLogo,
-    InputFooter,
-    InputFooterError,
-    ItemsLeft,
-    ItemsRight,
+    FooterInput,
+    FooterInputError,
+    Instagram,
+    LeftNavItems,
+    RightNavItems,
     LogoSocialIcons,
-    NavItem,
+    NavItems,
+    Pinterest,
+    Twitter,
+    YoutubeWrapper,
     Youtube,
 } from './footerStyles';
 import { NavLink } from '../Header/headerStyles';
@@ -48,7 +45,7 @@ function Footer({ mobile }) {
             >
                 <FooterBody>
                     <FooterForm onSubmit={handleSubmit(onSubmit)}>
-                        <InputFooter
+                        <FooterInput
                             mobile={mobile}
                             name="email"
                             type="text"
@@ -64,9 +61,9 @@ function Footer({ mobile }) {
                             })}
                             placeholder="Updates in your inbox..."
                         />
-                        <InputFooterError mobile={mobile}>
+                        <FooterInputError mobile={mobile}>
                             {errors.email?.message}
-                        </InputFooterError>
+                        </FooterInputError>
 
                         <ButtonFooter
                             mobile={mobile}
@@ -81,8 +78,8 @@ function Footer({ mobile }) {
                             Go
                         </ButtonFooter>
                     </FooterForm>
-                    <NavItem mobile={mobile}>
-                        <ItemsLeft>
+                    <NavItems mobile={mobile}>
+                        <LeftNavItems>
                             <Link href="/">
                                 <NavLink mobile={mobile} linkFooter>
                                     Home
@@ -104,8 +101,8 @@ function Footer({ mobile }) {
                                     About Us
                                 </NavLink>
                             </Link>
-                        </ItemsLeft>
-                        <ItemsRight>
+                        </LeftNavItems>
+                        <RightNavItems>
                             <Link href="/careers">
                                 <NavLink mobile={mobile} linkFooter>
                                     Careers
@@ -121,26 +118,20 @@ function Footer({ mobile }) {
                                     Privacy Policy
                                 </NavLink>
                             </Link>
-                        </ItemsRight>
-                    </NavItem>
+                        </RightNavItems>
+                    </NavItems>
                     <LogoSocialIcons>
                         <FooterIcons mobile={mobile}>
-                            <FaFacebookSquare className="social-icon"></FaFacebookSquare>
-                            <Youtube mobile={mobile}>
-                                <FaYoutube className="icon-youtube"></FaYoutube>
-                            </Youtube>
-                            <FaTwitter className="social-icon"></FaTwitter>
-                            <FaPinterest className="social-icon"></FaPinterest>
-                            <FaInstagram className="social-icon"></FaInstagram>
+                            <Facebook />
+                            <YoutubeWrapper mobile={mobile}>
+                                <Youtube />
+                            </YoutubeWrapper>
+                            <Twitter />
+                            <Pinterest />
+                            <Instagram />
                         </FooterIcons>
                         <FooterLogo mobile={mobile}>
                             <FooterLogoSvg />
-                            {/* <Image
-                                src="/images/footer-logo.svg"
-                                alt="Footer Manage Logo"
-                                width="158px"
-                                height="26px"
-                            ></Image> */}
                         </FooterLogo>
                     </LogoSocialIcons>
                 </FooterBody>

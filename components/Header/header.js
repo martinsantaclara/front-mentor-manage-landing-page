@@ -5,10 +5,10 @@ import {
     DesktopMenu,
     Hamburger,
     HeaderContainer,
-    WrapperLogo,
+    LogoWrapper,
 } from './headerStyles';
 import NavLinks from './navlinks';
-import { Container, ContainerMobileMenu, Button } from '../../styles/globals';
+import { Container, MobileMenuContainer, Button } from '../../styles/globals';
 import Logo from './logo';
 import { HamburgerClose, HamburgerMenu } from './hamburger';
 
@@ -22,9 +22,9 @@ function Header({ mobile, mobileMenu, setMobileMenu }) {
                 align={'center'}
             >
                 <Link href="/">
-                    <WrapperLogo>
+                    <LogoWrapper>
                         <Logo mobile={mobile} />
-                    </WrapperLogo>
+                    </LogoWrapper>
                 </Link>
                 {!mobile && (
                     <DesktopMenu>
@@ -53,9 +53,9 @@ function Header({ mobile, mobileMenu, setMobileMenu }) {
 
             {mobile && mobileMenu && (
                 <BgMobileMenu>
-                    <ContainerMobileMenu>
+                    <MobileMenuContainer>
                         <NavLinks mobile={mobile} flxdirection={'column'} />
-                    </ContainerMobileMenu>
+                    </MobileMenuContainer>
                 </BgMobileMenu>
             )}
         </HeaderContainer>

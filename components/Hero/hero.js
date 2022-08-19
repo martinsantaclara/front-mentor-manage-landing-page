@@ -1,9 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import {
     BgHeroContent,
-    ContainerHeroImage,
+    HeroImageWrapper,
     HeroContainer,
     HeroContent,
     HeroDescription,
@@ -11,7 +10,7 @@ import {
 } from './heroStyles';
 import { Container, Button } from '../../styles/globals';
 import { RightHeroSvg } from './rightHeroSvg';
-import { HeroIllustration } from './heroIllustration';
+import { HeroImage } from './HeroImage';
 
 function Hero({ mobile, widthScreen }) {
     const rightBgHeroContent =
@@ -24,15 +23,9 @@ function Hero({ mobile, widthScreen }) {
                 widthComponent={'87%'}
                 align={mobile ? 'center' : 'start'}
             >
-                <ContainerHeroImage mobile={mobile}>
-                    <HeroIllustration />
-                    {/* <Image
-                        width={540}
-                        height={485}
-                        alt="hero-illustration"
-                        src="/images/illustration-intro1.svg"
-                    ></Image> */}
-                </ContainerHeroImage>
+                <HeroImageWrapper mobile={mobile}>
+                    <HeroImage />
+                </HeroImageWrapper>
                 <HeroContent mobile={mobile}>
                     <HeroTitle mobile={mobile}>
                         Bring everyone together to build better products.
@@ -49,7 +42,6 @@ function Hero({ mobile, widthScreen }) {
                         <Link href="/started">
                             <a href="">Get Started</a>
                         </Link>
-                        {/* Get Started */}
                     </Button>
                     <BgHeroContent
                         mobile={mobile}

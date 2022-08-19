@@ -1,4 +1,13 @@
 import styled from 'styled-components';
+import { css } from 'styled-components';
+
+import {
+    FaFacebookSquare,
+    FaYoutube,
+    FaTwitter,
+    FaPinterest,
+    FaInstagram,
+} from 'react-icons/fa';
 
 export const FooterContainer = styled.footer`
     padding: ${({ mobile }) =>
@@ -21,7 +30,7 @@ export const FooterForm = styled.form`
     align-items: ${({ mobile }) => (mobile ? 'center' : 'flex-start')};
 `;
 
-export const InputFooter = styled.input`
+export const FooterInput = styled.input`
     font-size: ${({ theme }) => theme.fsText_xs}rem;
     font-weight: ${({ theme }) => theme.fwRegular};
     line-height: 1.46;
@@ -41,7 +50,7 @@ export const InputFooter = styled.input`
     }
 `;
 
-export const InputFooterError = styled.p`
+export const FooterInputError = styled.p`
     position: absolute;
     top: ${({ mobile }) => (mobile ? '3.25rem' : '3.4375rem')};
     left: 1rem;
@@ -53,7 +62,7 @@ export const InputFooterError = styled.p`
     color: ${({ theme }) => theme.onError};
 `;
 
-export const NavItem = styled.div`
+export const NavItems = styled.div`
     display: flex;
     justify-content: space-between;
     color: ${({ theme }) => theme.onSecondary1};
@@ -65,9 +74,9 @@ export const NavItem = styled.div`
     max-width: ${({ mobile }) => (mobile ? '21.875rem' : 'none')};
 `;
 
-export const ItemsLeft = styled.div``;
+export const LeftNavItems = styled.div``;
 
-export const ItemsRight = styled.div``;
+export const RightNavItems = styled.div``;
 
 export const LogoSocialIcons = styled.div`
     @media ${({ theme }) => theme.breakpoints.md} {
@@ -107,7 +116,7 @@ export const Copyright = styled.p`
     }
 `;
 
-export const Youtube = styled.div`
+export const YoutubeWrapper = styled.div`
     position: relative;
     display: inline-flex;
     width: ${({ mobile }) => (mobile ? '2rem' : '1.25rem')};
@@ -120,4 +129,44 @@ export const Youtube = styled.div`
     &:hover {
         background-color: ${({ theme }) => theme.onSecondaryHover};
     }
+`;
+
+const sharedStylesIcons = css`
+    color: ${({ theme }) => theme.onSecondary1};
+    font-size: 2rem;
+    cursor: pointer;
+
+    @media ${({ theme }) => theme.breakpoints.md} {
+        font-size: 1.25rem;
+    }
+
+    &:hover {
+        color: ${({ theme }) => theme.onSecondaryHover};
+    }
+`;
+
+export const Facebook = styled(FaFacebookSquare)`
+    ${sharedStylesIcons}
+`;
+
+export const Youtube = styled(FaYoutube)`
+    position: absolute;
+    font-size: 1.5rem;
+    cursor: pointer;
+
+    @media ${({ theme }) => theme.breakpoints.md} {
+        font-size: 1rem;
+    }
+`;
+
+export const Twitter = styled(FaTwitter)`
+    ${sharedStylesIcons}
+`;
+
+export const Pinterest = styled(FaPinterest)`
+    ${sharedStylesIcons}
+`;
+
+export const Instagram = styled(FaInstagram)`
+    ${sharedStylesIcons}
 `;

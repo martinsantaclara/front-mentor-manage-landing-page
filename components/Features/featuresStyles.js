@@ -18,7 +18,7 @@ export const FeatureHead = styled.div`
 `;
 
 export const FeatureTitle = styled.h2`
-    color: ${({ theme }) => theme.clrHeading};
+    color: ${({ theme }) => theme.clrHeading1};
     position: relative;
     font-size: ${({ mobile, theme }) =>
         mobile
@@ -59,7 +59,7 @@ export const FeatureDescription = styled.p`
     max-width: ${({ mobile }) => (mobile ? '23.4375rem' : '21.875rem')};
 `;
 
-export const ItemsFeatures = styled.div`
+export const FeaturesItemsWrapper = styled.div`
     margin-left: ${({ widthScreen }) => (widthScreen > 480 ? '0rem' : '1rem')};
     display: flex;
     flex-direction: column;
@@ -68,13 +68,13 @@ export const ItemsFeatures = styled.div`
     max-width: ${({ mobile }) => (mobile ? '' : '33.75rem')};
 `;
 
-export const ItemFeature = styled.div`
+export const FeatureItem = styled.div`
     width: 100%;
     max-width: 28.125rem;
     margin-bottom: ${({ mobile }) => (mobile ? '3rem' : '2.5rem')};
 `;
 
-export const ItemFeatureHead = styled.div`
+export const FeatureItemHead = styled.div`
     display: flex;
     align-items: center;
     background-color: ${({ mobile, theme }) =>
@@ -88,7 +88,7 @@ export const ItemFeatureHead = styled.div`
             : '1.25rem 0 0 1.25rem'};
 `;
 
-export const ItemFeatureNumber = styled.div`
+export const FeatureItemNumber = styled.div`
     font-size: ${({ theme }) => theme.fsText_lg}rem;
     font-weight: ${({ theme }) => theme.fwBold};
     line-height: 1.5;
@@ -100,11 +100,11 @@ export const ItemFeatureNumber = styled.div`
     letter-spacing: -0.29px;
 `;
 
-export const ItemFeatureTitle = styled.p`
+export const FeatureItemTitle = styled.h3`
     color: ${({ theme, mobile, dark }) =>
-        mobile && dark ? theme.background : theme.onBackground};
-    font-size: ${({ theme }) => theme.fsText_lg}rem;
-    font-weight: ${({ theme }) => theme.fwBold};
+        mobile && dark ? theme.clrHeading2 : theme.clrHeading1};
+    font-size: ${({ theme }) => theme.fsHeading_xs}rem;
+    font-weight: ${({ theme }) => theme.fwHeading_xs};
     line-height: 1.5;
     letter-spacing: -0.8px;
     padding-left: ${({ mobile }) =>
@@ -113,7 +113,7 @@ export const ItemFeatureTitle = styled.p`
             : 'clamp(1rem, 1.79vw + 0.14rem, 1.75rem)'};
 `;
 
-export const ItemFeatureDescription = styled.p`
+export const FeatureItemDescription = styled.p`
     color: ${({ theme }) => theme.onBackgroundOpacity};
     font-size: ${({ mobile, theme }) =>
         mobile

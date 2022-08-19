@@ -69,11 +69,13 @@ const utility = {
     onInputActive: shared.onError,
     onSecondaryHover: shared.primary,
     // font sizes headings
+    fsHeading_xs: shared.fs600,
     fsHeading_sm: shared.fs700,
     fsHeading_md: shared.fs800,
     fsHeading_lg: shared.fs900,
     fsHeading_xl: shared.fs950,
     // font weight Heading
+    fwHeading_xs: shared.fwUltraBold,
     fwHeading_sm: shared.fwUltraBold,
     fwHeading_md: shared.fwUltraBold,
     fwHeading_lg: shared.fwBold,
@@ -91,7 +93,8 @@ const light = {
     surface: 'hsl(0 0% 98%)',
     onBackground: 'hsl(228 38% 23%)',
     onBackgroundOpacity: 'hsl(228 38% 23% / .5)',
-    clrHeading: 'hsl(228 38% 23%)',
+    clrHeading1: 'hsl(228 38% 23%)',
+    clrHeading2: 'hsl(228 38% 23%)',
     clrLogo: 'hsl(228 38% 23%)',
 };
 
@@ -100,7 +103,8 @@ const dark = {
     surface: 'hsl(0 4% 31%)',
     onBackground: 'hsl(0 0% 100%)',
     onBackgroundOpacity: 'hsl(0 0% 100% / .5)',
-    clrHeading: 'hsl(0 0% 100%)',
+    clrHeading1: 'hsl(0 0% 100%)',
+    clrHeading2: 'hsl(0 0% 7%)',
     clrLogo: 'hsl(0 0% 100%)',
 };
 
