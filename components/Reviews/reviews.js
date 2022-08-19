@@ -17,6 +17,7 @@ import {
     ReviewsTitle,
 } from './reviewsStyles';
 import { BgReview } from './bgReview';
+import AVATAR from '../../public/images/avatar-anisha.png';
 
 const positionCalc = (widthScreen) => {
     const pos = Math.floor((widthScreen / 2 - 300) / 570);
@@ -103,7 +104,8 @@ const Reviews = ({ mobile, widthScreen }) => {
                 reviews
             >
                 <BgLeftReviews widthScreen={widthScreen} aria-hidden="true">
-                    <BgReview />
+                    {/* <BgReview /> */}
+
                     {/* <Image
                         src="/images/bg-tablet-pattern.svg"
                         alt=""
@@ -125,13 +127,21 @@ const Reviews = ({ mobile, widthScreen }) => {
                                 >
                                     <ReviewImage>
                                         {/* {avatar(index)} */}
-
                                         <Image
+                                            src={AVATAR}
+                                            alt="Seller of the NFT, in this case Jules Wyvern"
+                                            width={30}
+                                            height={30}
+                                            priority
+                                            layout="fixed"
+                                        />
+
+                                        {/* <Image
                                             src={`/images/avatar-${item.image}.png`}
                                             width="72px"
                                             height="72px"
                                             alt={`avatar-${item.image}`}
-                                        ></Image>
+                                        ></Image> */}
                                     </ReviewImage>
                                     <ReviewName>{item.name}</ReviewName>
                                     <ReviewDescription mobile={mobile}>
