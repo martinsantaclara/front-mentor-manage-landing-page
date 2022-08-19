@@ -17,7 +17,6 @@ import {
     ReviewsTitle,
 } from './reviewsStyles';
 import { BgReview } from './bgReview';
-import AVATAR from '../../public/images/avatar-anisha.png';
 
 const positionCalc = (widthScreen) => {
     const pos = Math.floor((widthScreen / 2 - 300) / 570);
@@ -56,17 +55,6 @@ const Reviews = ({ mobile, widthScreen }) => {
         },
     ];
 
-    const avatar_urls = [
-        '/images/avatar-ali.png',
-        '/images/avatar-anisha.png',
-        '/images/avatar-richard.png',
-        '/images/avatar-shanai.png',
-    ];
-
-    const avatar = (index) => {
-        return <Image src={avatar_urls[index]} height={90} width={90} alt="" />;
-    };
-
     useEffect(() => {
         if (!mobile) {
             const interval = setInterval(() => {
@@ -104,7 +92,7 @@ const Reviews = ({ mobile, widthScreen }) => {
                 reviews
             >
                 <BgLeftReviews widthScreen={widthScreen} aria-hidden="true">
-                    {/* <BgReview /> */}
+                    <BgReview />
 
                     {/* <Image
                         src="/images/bg-tablet-pattern.svg"
@@ -126,22 +114,12 @@ const Reviews = ({ mobile, widthScreen }) => {
                                     show={itemIndex === index || !mobile}
                                 >
                                     <ReviewImage>
-                                        {/* {avatar(index)} */}
                                         <Image
-                                            src={AVATAR}
-                                            alt="Seller of the NFT, in this case Jules Wyvern"
-                                            width={30}
-                                            height={30}
-                                            priority
-                                            layout="fixed"
-                                        />
-
-                                        {/* <Image
                                             src={`/images/avatar-${item.image}.png`}
                                             width="72px"
                                             height="72px"
                                             alt={`avatar-${item.image}`}
-                                        ></Image> */}
+                                        ></Image>
                                     </ReviewImage>
                                     <ReviewName>{item.name}</ReviewName>
                                     <ReviewDescription mobile={mobile}>
