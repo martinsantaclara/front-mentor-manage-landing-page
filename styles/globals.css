@@ -25,5 +25,9 @@
 }
 
 span span ~ img {
-    height: 500px !important;
+    inset: unset !important;
+    top: 44px !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
 }
